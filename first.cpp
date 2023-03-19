@@ -103,7 +103,7 @@ int main_2(){
 }
 
 //typedef std::vector<std::pair<std::string, int>> pairlist; // это просто переменная pairlist
-                                                            //внутри которой лежит тип данных
+                                                            // внутри которой лежит тип данных
 typedef std::string text_t;
 typedef int number_t;
 using text_t =  std::string;
@@ -115,8 +115,75 @@ int main_3(){
     number_t age = 21;
 
     std::cout << age << "\n";
-    std::cout << firstName << "\n";
+    std::cout << firstName;
 
     return 0;
+}
 
+int main_4(){
+    // or double
+    int students = 20;
+
+    //plus
+    students+=1;
+    students++;
+
+    //minus
+    students-=1;
+    students--;
+
+    //multiply
+    students*=1;
+    
+    //separate
+    students/=1;
+
+    int remainder = students % 2;
+
+    std::cout << students << "\n";
+    std::cout << remainder;
+
+    return 0;
+}
+
+int main_5(){
+    // можно присваивать разные типы данных одной и той же переменной
+    double tear = (int) 33;
+    char tea = 100;
+    std::cout << (char) 100;
+    std::cout << tea;
+
+    int correct = 8;
+    int questions = (double) 10;
+    double score = correct / questions * 100;
+
+    std::cout << score << "%" << "\n"; 
+    std::cout << tear;
+
+    return 0;
+}
+
+int main_6(){
+    // C++ input и C++ output
+    std::string name;
+    int age;
+
+    std::cout << "What's your full name?: ";
+    std::getline(std::cin >> std::ws, name);
+
+    //std::cout << "What's your name?:  ";
+    //std::cin >> name;
+
+    std::cout << "What's your age? ";
+    std::cin >> age;
+
+    std::cout << "Hello " << name << "\n";
+    std::cout << "You are " << age << " years old";
+
+    return 0;
+}
+
+int main_7(){
+
+    return 0;
 }
