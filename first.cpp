@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
-#include<cmath>
+#include <cmath>
+#include <ctime>
 
 int main(){
     
@@ -425,11 +426,12 @@ int main_13(){
 
 int main_14(){
     
-    //&& - выполняется если два(или более) условий верны
-    //|| - выполняется если последнее из двух условий верно
-    // ? - выполняется
+    //&& - (and) выполняется если два(или более) условий верны 
+    //|| - (or) выполняется если последнее из двух условий верно
+    // ? - (not) переворачивает значение оператора (true = false)
     
     int temp;
+    bool sunny = true;
     
     std::cout << "Enter your temperature";
     std:cin >> temp;
@@ -437,7 +439,186 @@ int main_14(){
     if(temp > 0 && temp < 30){
         std::cout << "Good temperature!";
     }
+    if(temp <= 0 || temp > 30){
+        std::cout << "Bad temperature";
+    }
     else{
         std::cout << "Stay home!"
     }
+
+    if(!sunny){ // sunny == true
+        std::cout << "It's cloudy outside";
+    }
+    else{
+        std::cout << "It's sunny outside";
+    }
+}
+
+int main_15(){
+
+    std::string username;
+
+    std::cout << "Enter your username: ";
+    std::getline(std::cin, username);
+
+    if(username.length()) > 15{
+        std::cout << "Your name can't be over 15 characters"; 
+    }
+    else if{
+        std::cout << "Welcome " << username;
+    }
+
+    if(username.empty()){
+        std::cout << "You didn't enter your name";
+    }
+    else if{
+        std::cout << "Hello " << username;
+    }
+    
+    //username.clear();
+    //std::cout << "Hello " << username;
+
+    //username.append("but Dima lox");
+    //std::cout << "Hello " << username;
+
+    //std::cout << username.at(1);
+
+    //username.insert(0,"#");
+    //std::cout << username;
+
+    //std::cout << username.find(' ');
+
+    //username.erase(0,3);
+    //std::cout << username;
+}
+
+int main_16(){
+
+    std::string surname;
+
+    while(surname.empty()){
+        std::cout << "Enter your surname: ";
+        std::getline(std::cin,surname);
+    }
+
+    // БЕСКОНЕЧНЫЙ ЦИКЛ (INFINITE LOOP)
+    while(1==1){
+        std::cout << "HELP! I'M STUCK IN AN INFINITE LOOP";
+    }
+
+    std::cout << "Hello " << surname;
+}
+
+int main_17(){
+
+    //do while loop
+    int num;
+
+    do{
+        std::cout << "Enter a positive number: ";
+        std::cin >> num;
+    }while(num < 0);
+
+    std::cout << "The number is: " << num;
+}
+
+int main_18(){
+    
+    // ЦИКЛ FOR (FOR LOOP)
+
+    //int i = 0;
+    for(int i = 10; i<=3; i-=2){ //i = index
+        std::cout << i << '\n';
+    }
+}
+
+int maim_19(){
+
+    // break = прерывает цикл и выходит из него
+    // continue = пропускает цикл и переходит к следующему блоку кода
+    for(int i = 1; i <= 20; i++){
+        if(i == 13){
+            break;
+            //continue;
+        }
+        std::cout << i << '\n';
+    }
+
+    int rows;
+    int columns;
+    char symbol;
+
+    // ЦИКЛ ВНУТРИ ЦИКЛА
+    std::cout << "How many rows?: ";
+    std::cin >> rows;
+
+    std::cout << "How many columns?: ";
+    std::cin >> columns;
+
+    std::cout << "Enter a symbol to use: ";
+    std::cin >> symbol;
+
+    for (int i = 1; i <= rows; i++){
+        for(int j = 1; j <= columns; j++){
+            std::cout << symbol;
+        }
+        std::cout << "\n";
+    }
+}
+
+int main_20(){
+
+    //pseudo-random function
+    srand(time(NULL));
+
+    for(i = 1; i <= 3; i++){
+        int numbers = (rand() % 100) + 1;
+        std::cout << numbers << '\n';
+    }
+    //but with module <ctime> this is a truly random
+    srand(time(0));
+    int randInt = rand() % 5 + 1;
+
+    switch (randInt){
+    case 1: std::cout << "You win a gift card!\n";
+        break;
+    case 2: std::cout << "You win a board trip!\n";
+        break;
+    case 3: std::cout << "You win a new car!\n";
+        break;
+    case 4: std::cout << "You win a concert tickets\n";
+        break;
+    case 5: std::cout << "You win a new t-shirt!\n";
+        break;            
+    } 
+}
+
+int main_21(){
+
+    //УГАДАЙКА (GUESSING GAME)
+
+    int num;
+    int guess;
+    int tries;
+
+    srand(time(NULL));
+    num = (rand() % 100) + 1;
+
+    std::cout << "*****NUBER GUESSING GAME*****\n";
+
+    do{
+        std::cout << "Enter a guess between (1-100): "
+        std::cin >> guess;
+        tries++;
+
+        if(guess > num){
+            std::cout << "Too high\n";
+        }
+        else if(guess < num){
+            std::cout << "Too low\n";
+        }
+        else{
+            std:: << "CORRECT!" << tries << '\n'
+        }
+    }while(guess != num);
 }
