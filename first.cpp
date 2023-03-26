@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include<cmath>
 
 int main(){
     
@@ -184,6 +185,259 @@ int main_6(){
 }
 
 int main_7(){
+    
+    // maths operators
+    
+    double x = 3.14;
+    double y = 4;
+    double z;
+    double c;
+    double b;
+    double a;
+    double g;
+    double f = 2.5;
+    double h;
+    double j;
 
-    return 0;
+    c = std::max(x,y);
+    z = std::min(x,y);
+    b = pow(2,3);
+    a = sqrt(9);
+    g = abs(-144);
+    f = round(f);
+    h = ceil(x);
+    j = floor(x);
+    
+    std::cout << z << c << "\n";
+    std::cout << b << a << "\n";
+    std::cout << g << f << h;
+}
+
+int main_8(){
+    
+    double e;
+    double r;
+    double t;
+    
+    std::cout << "Enter side E: ";
+    std::cin >> e;
+    
+    std::cout << "Enter side R: ";
+    std::cin >> r;
+    
+    e = sqrt(pow(e,2) + pow(r,2));
+    
+    std::cout << "Enter side T: " << t;
+}
+
+int main_9(){
+    
+    int age;
+    
+    std::cout << "Enter your age: ";
+    std::cin >> age;
+    
+    if(age >= 18){
+        std::cout << "Welcome!";
+    }
+    else if(age < 0){
+        std::cout << "You haven't been born yet!"
+    }
+    else if(age > 70){
+        std::cout << "You are too old for that shit"
+    }
+    else(age < 18){
+        std::cout << "You are too small"
+    }
+}
+    
+int main_10(){
+    
+    int month;
+    std::cout << "Enter your month: ";
+    std::cin >> month;
+    
+    // можно было прописать вcе условия через if, 
+    //но это не прагматично(because we uses switch)
+    
+    switch(month){
+        case 1:
+            std::cout << "It's January";
+            break;
+        
+        case 2:
+            std::cout << "It's February";
+            break;
+        
+        case 3:
+            std::cout << "It's March";
+            break;
+        
+        case 4:
+            std::cout << "It's April";
+            break;
+        
+        case 5:
+            std::cout << "It's May";
+            break;
+        
+        case 6:
+            std::cout << "It's June";
+            break;
+        
+        case 7:
+            std::cout << "It's July";
+            break;
+        
+        case 8:
+            std::cout << "It's August";
+            break;
+        
+        case 9:
+            std::cout << "It's September";
+            break;
+        
+        case 10:
+            std::cout << "It's October";
+            break;
+        
+        case 11:
+            std::cout << "It's November";
+            break;
+        
+        case 12:
+            std::cout << "It's December";
+            break;
+        
+        default:
+            std::cout << "The programm using only numbers(1-12)";
+    }
+}
+
+int main_11(){
+    
+    // switch - замена if(case)/else(default) statement
+    char grade;
+    
+    std::cout << "What's letter grade?: ";
+    std::cin >> grade;
+    
+    switch(grade){
+        case 'A':
+            std::cout << "Great!";
+            break;
+        
+        case 'B':
+            std::cout << "Good!";
+            break;
+        
+        case 'C':
+            std::cout << "Okay";
+            break;
+        
+        case 'D':
+            std::cout << "Not good";
+            break;
+        
+        case 'F':
+            std:;cout << "Epic Fail";
+            break;
+        
+        default:
+            std::cout << "The programm using only letter grades (A-F)";
+    }
+}
+
+int main_12(){
+    
+    //CALCULATOR
+    
+    char op;
+    double num1;
+    double num2
+    double result;
+    
+    std::cout << " DEBILNIK 1.0 \n";
+    
+    std:cout << "Enter either( + - * / ): ";
+    std::cin >> op;
+    
+    std::cout << "Enter first number: ";
+    std::cin >> num1;
+    
+    std::cout << "Enter second number: ";
+    std::cin >> num2;
+    
+    switch(op){
+        case "+":
+            result = num1 + num2;
+            std::cout << "result: " << result << "\n";
+            break;
+            
+        case "-":
+            result = num1 - num2;
+            std::cout << "result: " << result << "\n";
+            break;
+            
+        case "*":
+            result = num1 * num2;
+            std::cout << "result: " << result << "\n";
+            break;
+            
+        case "/":
+            result = num1 / num2;
+            std::cout << "result: " << result << "\n";
+            break;
+        
+        default:
+            std::cout << "Error";
+            break;
+    }
+}
+
+int main_13(){
+    
+    // ternary operator(замена if/else statement) "?":
+    //condition(условие) ? expression1(if it's true) : expression2(if it's false)
+    
+    int years = 75;
+    years >= 60 ? std::cout << "You pass!" : std::cout << "You failed!";
+    
+    int number = 9;
+    number % 2 == 1 ? std::cout << "ODD" : std::cout << "EVEN";
+    
+    bool hungry = true;
+    
+    //hungry == true ?
+    hungry ? std::cout << "true" : std::cout << "false";
+    std::cout << (hungry ? "true" : "false");
+    
+    
+    //if(years >= 60){
+    //    
+    //    std::cout << "You pass!";
+    //}
+    //else{
+    //    
+    //    std::cout << "You fail!";
+    //}
+}
+
+int main_14(){
+    
+    //&& - выполняется если два(или более) условий верны
+    //|| - выполняется если последнее из двух условий верно
+    // ? - выполняется
+    
+    int temp;
+    
+    std::cout << "Enter your temperature";
+    std:cin >> temp;
+    
+    if(temp > 0 && temp < 30){
+        std::cout << "Good temperature!";
+    }
+    else{
+        std::cout << "Stay home!"
+    }
 }
