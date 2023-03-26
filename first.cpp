@@ -604,7 +604,7 @@ int main_21(){
     srand(time(NULL));
     num = (rand() % 100) + 1;
 
-    std::cout << "*****NUBER GUESSING GAME*****\n";
+    std::cout << "*****NUMBER GUESSING GAME*****\n";
 
     do{
         std::cout << "Enter a guess between (1-100): "
