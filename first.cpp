@@ -471,7 +471,7 @@ int main_15(){
     if(username.empty()){
         std::cout << "You didn't enter your name";
     }
-    else if{
+    else if(){
         std::cout << "Hello " << username;
     }
     
@@ -607,7 +607,7 @@ int main_21(){
     std::cout << "*****NUMBER GUESSING GAME*****\n";
 
     do{
-        std::cout << "Enter a guess between (1-100): "
+        std::cout << "Enter a guess between (1-100): ";
         std::cin >> guess;
         tries++;
 
@@ -618,7 +618,21 @@ int main_21(){
             std::cout << "Too low\n";
         }
         else{
-            std:: << "CORRECT!" << tries << '\n'
+            std::cout << "CORRECT!" << tries << '\n';
         }
     }while(guess != num);
+}
+
+void happyBirthday(){
+    int edit;
+
+    int main_33(){
+
+        std::cout << "Say my name!";
+        std::cout << "Heisenberg";
+    }
+    do{
+        if()
+    }
+    std::cout << "Happy Birthday to you!";
 }
