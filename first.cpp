@@ -624,15 +624,14 @@ int main_21(){
 }
 
 void happyBirthday(){
-    int edit;
+
+    std::cout << "Happy Birthday to you!";
 
     int main_33(){
+
+        happyBirthday();
 
         std::cout << "Say my name!";
         std::cout << "Heisenberg";
     }
-    do{
-        if()
-    }
-    std::cout << "Happy Birthday to you!";
 }
